@@ -19,8 +19,7 @@ const scssFiles = [
 
 // Порядок подключения JS файлов
 const jsFiles = [
-	'./src/js/lib.js',
-	'./src/js/main.js'
+	'./src/js/calc.js'
 ]
 
 //Таск на стили CSS
