@@ -1,0 +1,99 @@
+@import "variables";
+
+.purpose {
+	background: url(../../build/img/purpose/puprose-background.jpg) center no-repeat;
+	background-size: 100%;
+	margin: 101px 0 0 0;
+	padding: 60px 0 247px 0;
+
+	&-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1152px;
+		margin: 0 auto;
+	}
+
+	&-template-1 {
+		background-color: $main-block-color;
+		border-radius: 6px;
+		padding: 20px 20px 15px;
+	}
+
+	&__title {
+		text-align: center;
+		text-decoration: underline;
+		font-size: 15;
+		font-weight: 700;
+		color: $main-text-color;
+		margin: 15px 0 5px 0;
+	}
+
+	&__description {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 20px;
+		color: $main-text-color;
+		margin-bottom: 5px;
+	}
+
+	&-template-2 {
+		background-color: $main-block-color;
+		border-radius: 6px;
+		padding: 20px 34px;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&:nth-child(1) {
+			margin-right: 33px;
+		}
+		&:nth-child(2) {
+			margin-left: 33px;
+		}
+	}
+
+	&__input {
+		font-size: 15px;
+		font-weight: 600;
+		color: $sub-text-color;
+		background-color: $main-text-color;
+		border-radius: 6px;
+		margin-bottom: 30px;
+		padding: 10px;
+
+		&::placeholder {
+			color: $sub-text-color;
+		}
+	}
+
+	&__send {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		font-size: 15px;
+		font-weight: 700;
+		color: $sub-text-color;
+		background-color: $main-text-color;
+		border-radius: 6px;
+		padding: 10px;
+
+		&:hover {
+			color: $main-text-color;
+			background-color: $sub-text-color;
+		}
+	}
+}

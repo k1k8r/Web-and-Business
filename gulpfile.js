@@ -14,7 +14,8 @@ const sass = require('gulp-sass');
 const scssFiles = [
 	'./src/scss/normalize.scss',
 	'./src/scss/variables.scss',
-	'./src/scss/header.scss'
+	'./src/scss/header.scss',
+	'./src/scss/purpose.scss',
 ]
 
 // Порядок подключения JS файлов
