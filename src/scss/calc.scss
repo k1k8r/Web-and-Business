@@ -1,0 +1,73 @@
+@import "variables";
+
+.calc {
+	background-color: $main-background-color;
+	padding: 30px 20px;
+
+	&-container {
+		max-width: 1152px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 35px;
+		font-weight: 600;
+		color: $main-text-color;
+		margin-bottom: 25px;
+	}
+
+	&-block {
+		max-width: 592px;
+		background-color: $main-block-color;
+		border-radius: 6px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin: 0 auto;
+		padding: 30px 90px;
+
+		&-2:nth-child(1) {
+			margin-right: 7.5px;
+		}
+
+		&-2:nth-child(2) {
+			margin-left: 7.5px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+	}
+
+	&__input {
+		font-size: 14px;
+		font-weight: 600;
+		color: $sub-text-color;
+		background-color: $main-text-color;
+		border-radius: 6px;
+		padding: 10px;
+		margin-bottom: 15px;
+
+		&::placeholder {
+			color: $sub-text-color;
+		}
+	}
+
+	&-send {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		font-size: 14px;
+		font-weight: 700;
+		color: $sub-text-color;
+		background-color: $main-text-color;
+		border-radius: 6px;
+		padding: 10px;
+
+		&:hover {
+			color: $main-text-color;
+			background-color: $sub-text-color;
+		}
+	}
+}

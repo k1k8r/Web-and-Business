@@ -49,19 +49,48 @@
 			</div>
 			<div class="purpose-template-2">
 				<form class="purpose__form" action="#">
-					<div class="purpose-block">
-						<input class="purpose__input" type="text" placeholder="ФИО">
-						<input class="purpose__input" type="text" placeholder="Сумма кредита">
+					<div class="purpose-wrapper">
+						<div class="purpose-block">
+							<input class="purpose__input" type="text" placeholder="ФИО">
+							<input class="purpose__input" type="text" placeholder="Сумма кредита">
+						</div>
+						<div class="purpose-block">
+							<input class="purpose__input" type="text" placeholder="Доход">
+							<input class="purpose__input" type="text" placeholder="Цель кредита">
+						</div>
 					</div>
-					<div class="purpose-block">
-						<input class="purpose__input" type="text" placeholder="Ваша зарплата">
-						<input class="purpose__input" type="text" placeholder="Вид кредита">
-					</div>
+					<div class="purpose__send"><button class="purpose__button">Рассчитать кабалу</button></div>
 				</form>
-				<div class="purpose__send"><button class="purpose__button">Рассчитать кабалу</button></div>
+
 			</div>
 		</div>
 	</main>
+
+	<section class="calc">
+		<div class="calc-container">
+			<h1 class="calc__title">Калькулятор рабства</h1>
+			<div class="calc-block">
+				<form action="#" class="calc__form">
+					<div class="calc-wrapper">
+						<div class="calc-block-2">
+							<input type="text" class="calc__input" placeholder="ФИО">
+							<input type="text" class="calc__input" placeholder="Доход">
+							<input type="text" class="calc__input" placeholder="Сумма кредита">
+							<input type="text" class="calc__input" placeholder="Кол-во месяцев">
+						</div>
+						<div class="calc-block-2">
+							<input type="text" class="calc__input" placeholder="Регион">
+							<input type="text" class="calc__input" placeholder="Цель кредита">
+							<input type="text" class="calc__input" placeholder="Ставка">
+							<input typp="text" class="calc__input" placeholder="Ваш кредит: ">
+						</div>
+					</div>
+					<div class="calc-send"><button class="calc__button">Рассчитать кабалу</button></div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- <script src="//megatimer.ru/get/ea37fdb4bd89a6d41acf346f457b3c77.js"></script> -->
 
 	<script src="build/js/script.js"></script>
 </body>

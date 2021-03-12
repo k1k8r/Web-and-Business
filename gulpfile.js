@@ -16,6 +16,7 @@ const scssFiles = [
 	'./src/scss/variables.scss',
 	'./src/scss/header.scss',
 	'./src/scss/purpose.scss',
+	'./src/scss/calc.scss'
 ]
 
 // Порядок подключения JS файлов
