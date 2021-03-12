@@ -89,6 +89,7 @@
 		border-radius: 2px;
 		padding: 8px 30px;
 		z-index: 3;
+		transition: all 0.1ms ease 0.1s;
 
 		&:hover {
 			color: $main-text-color;
