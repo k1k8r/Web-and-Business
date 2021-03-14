@@ -9,6 +9,7 @@ const imgCompresed = require('gulp-imagemin');
 const browserSinc = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
+const typescript = require('gulp-typescript');
 
 //Порядок подключения SCSS файлов
 const scssFiles = [
@@ -22,8 +23,9 @@ const scssFiles = [
 ]
 
 // Порядок подключения JS файлов
-const jsFiles = [
-	'./src/js/calc.js'
+const tsFiles = [
+	'./src/ts/popup.ts',
+	'./src/ts/calc.ts',
 ]
 
 //Таск на стили CSS
@@ -58,7 +60,8 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 	//Шаблон для поиска файлов JS
 	//Все файлы по шаблону '.src/js/**/*.js'
-	return gulp.src(jsFiles)
+	return gulp.src(tsFiles)
+		.pipe(typescript())
 		// Объединение файлов в один
 		.pipe(concat('script.js'))
 		// Минификация JS
@@ -97,7 +100,7 @@ gulp.task('watch', () => {
 	//Следить за SCSS файлами
 	gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))
 	//Следить за JS файлами
-	gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
+	gulp.watch('./src/ts/**/*.ts', gulp.series('scripts'))
 	//При изменении HTML запустить синхронизацию
 	gulp.watch('./*.html').on('change', browserSinc.reload);
 });
