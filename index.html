@@ -70,23 +70,27 @@
 		<div class="calc-container">
 			<h1 class="calc__title">Калькулятор рабства</h1>
 			<div class="calc-block">
-				<form action="#" class="calc__form">
-					<div class="calc-wrapper">
-						<div class="calc-block-2">
-							<input type="text" class="calc__input" placeholder="ФИО">
-							<input type="text" class="calc__input" placeholder="Доход">
-							<input type="text" class="calc__input" placeholder="Сумма кредита">
-							<input type="text" class="calc__input" placeholder="Кол-во месяцев">
-						</div>
-						<div class="calc-block-2">
-							<input type="text" class="calc__input" placeholder="Регион">
-							<input type="text" class="calc__input" placeholder="Цель кредита">
-							<input type="text" class="calc__input" placeholder="Ставка">
-							<input typp="text" class="calc__input" placeholder="Ваш кредит: ">
-						</div>
+				<div class="calc-wrapper">
+					<div class="calc-block-2">
+						<input id="userName" type="text" class="calc__input" placeholder="ФИО">
+						<input id="userWage" type="text" class="calc__input" placeholder="Доход">
+						<input id="kreditValue" type="text" class="calc__input" placeholder="Сумма кредита">
+						<input id="mounthCount" type="text" class="calc__input" placeholder="Кол-во месяцев">
 					</div>
-					<div class="calc-send"><button class="calc__button">Рассчитать кабалу</button></div>
-				</form>
+					<div class="calc-block-2">
+						<input id="userRegion" type="text" class="calc__input" placeholder="Регион">
+						<input id="kreditGoal" type="text" class="calc__input" placeholder="Цель кредита">
+						<input id="kreditRate" type="text" class="calc__input" placeholder="Ставка">
+						<input id="isKreditAgree" type="text" class="calc__input" placeholder="Ваш кредит: ">
+					</div>
+				</div>
+				<div class="calc-wrapper">
+					<div class="calc-send"><button id="get" class="calc__button">Рассчет вашей кабалы</button></div>
+					<div class="calc-send"><button id="clear" class="calc__button">Обнулить вашу кабалу</button></div>
+				</div>
+			</div>
+			<div class="calc-block__result">
+
 			</div>
 		</div>
 	</section>
@@ -123,7 +127,7 @@
 			<h2 class="footer__workers">Аналитика:<br>Попов Павел<br> Группа ИБТ-31</h2>
 		</div>
 	</footer>
-
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="build/js/script.js"></script>
 </body>
 
