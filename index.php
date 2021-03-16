@@ -10,10 +10,9 @@
 	<link rel="stylesheet" href="build/css/style.css">
 	<title>LevoИнвестCalc</title>
 </head>
+<?php include 'src/php/base_pdo.php'; ?>
 
 <body>
-	<?php include 'src/php/base.php'; ?>
-
 	<header id="header" class="header">
 		<div class="header-container">
 			<a href="#">
@@ -55,26 +54,28 @@
 		<div class="calc-container">
 			<h1 class="calc__title">Калькулятор рабства</h1>
 			<div class="calc-block">
-				<div class="calc-wrapper">
-					<div class="calc-block-2">
-						<input id="userName" type="text" class="calc__input" placeholder="ФИО">
-						<input id="userPhone" type="phone" class="calc__input" placeholder="Телефон">
-						<input id="docNum" type="text" class="calc__input" placeholder="Номер документа">
-						<input id="mounthCount" type="text" class="calc__input" placeholder="Срок кредита">
-						<input id="kreditAmount" type="text" class="calc__input" placeholder="Запрашиваемая сумма">
+				<form method="post" onsubmit="return validate()">
+					<div class="calc-wrapper">
+						<div class="calc-block-2">
+							<input id="userName" type="text" name="name_calc" class="calc__input" placeholder="ФИО">
+							<input id="userPhone" type="tel" name="tel_calc" class="calc__input" placeholder="Телефон">
+							<input id="docNum" type="number" name="passport_calc" class="calc__input" placeholder="Номер документа">
+							<input id="mounthCount" type="number" name="term_calc" class="calc__input" placeholder="Срок кредита">
+							<input id="kreditAmount" type="number" name="sum_calc" class="calc__input" placeholder="Запрашиваемая сумма">
+						</div>
+						<div class="calc-block-2">
+							<input id="userAddres" type="text" name="address_calc" class="calc__input" placeholder="Адрес">
+							<input id="userDoc" type="text" class="calc__input" placeholder="Документ">
+							<input id="kreditGoal" type="text" name="purpose_calc" class="calc__input" placeholder="Цель кредита">
+							<input id="userWage" type="number" name="income_calc" class="calc__input" placeholder="Ежемесячный доход">
+							<input id="kreditPercent" type="number" name="percent_calc" class="calc__input" placeholder="Процент">
+						</div>
 					</div>
-					<div class="calc-block-2">
-						<input id="userAddres" type="text" class="calc__input" placeholder="Адрес">
-						<input id="userDoc" type="text" class="calc__input" placeholder="Документ">
-						<input id="kreditGoal" type="text" class="calc__input" placeholder="Цель кредита">
-						<input id="userWage" type="text" class="calc__input" placeholder="Ежемесячный доход">
-						<input id="kreditPercent" type="text" class="calc__input" placeholder="Процент">
+					<div class="calc-wrapper">
+						<div class="calc-send"><button type="button" id="get" class="calc__button">Рассчет вашей кабалы</button></div>
+						<div class="calc-send"><button name="submit_calc" type="submit" id="clear" class="calc__button">Отправить вашу кабалу</button></div>
 					</div>
-				</div>
-				<div class="calc-wrapper">
-					<div class="calc-send"><button id="get" class="calc__button">Рассчет вашей кабалы</button></div>
-					<div class="calc-send"><button id="clear" class="calc__button">Обнулить вашу кабалу</button></div>
-				</div>
+				</form>
 			</div>
 			<!-- //! Одобрено / Не одобрено -->
 			<div class="calc-block__result">
@@ -89,7 +90,7 @@
 				<script src="//megatimer.ru/get/9bfa0002d92cc30c22fb50095b44ec55.js"></script>
 			</div>
 			<h2 class="stock__description">Оставьте данные своей карты(с обоих сторон)<br> и мы уменьшим ваш процент</h2>
-			<form class="stock__form" action="#">
+			<form class="stock__form" method="post">
 				<div class="stock-wrapper">
 					<div class="stock-block">
 						<input id="user" type="text" class="stock__input" placeholder="ФИО">

@@ -24,8 +24,6 @@ const scssFiles = [
 
 // Порядок подключения JS файлов
 const jsFiles = [
-	'./src/js/jquery.maskedinput.min.js',
-	'./src/js/mask.js',
 	'./src/js/calc.js',
 ]
 

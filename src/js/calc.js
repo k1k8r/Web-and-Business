@@ -5,6 +5,7 @@ $(document).ready(function () {
 	});
 
 	$('#get').click(function () {
+		console.log()
 		$('.calc-block__result').addClass('active');
 		$(".calc-block__result").html('');
 		var userWage = Number($("#userWage").val());
@@ -18,7 +19,7 @@ $(document).ready(function () {
 		var firstMessage = "Сумма займа: <strong>" + kreditAmount + " рублей</strong><br>Годовой процент: <strong>" + kreditPercent + "%</strong><br>Срок займа: <strong>" + mounthCount + " месяцев</strong><br>";
 		$(".calc-block__result").html(firstMessage);
 		var mrot = 12130;
-		var condition = userWage + mrot * 1.5;
+		var condition = mounthPayment + mrot * 1.5;
 		var mounthKreditPercent = kreditPercent / 100 / 12
 		var mounthPayment = kreditAmount * (mounthKreditPercent + ((mounthKreditPercent) / ((1 + mounthKreditPercent) ** mounthCount - 1)));
 		var isAgree = 'Кредит одобрен';
@@ -28,6 +29,5 @@ $(document).ready(function () {
 		} else {
 			$(".calc-block__result").html($(".calc-block__result").html() + isAgree);
 		}
-
 	});
 });

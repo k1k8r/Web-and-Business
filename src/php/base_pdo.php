@@ -14,13 +14,21 @@ $opt = [
 ];
 
 // ! запись в БД
-if (isset($_POST['name_calc']) && isset($_POST['income_calc'])) {
+
+if (isset($_POST['submit_calc'])) {
   $name = $_POST['name_calc'];
+  $tel = $_POST['tel_calc'];
+  $passport = $_POST['passport_calc'];
+  $term = $_POST['term_calc'];
+  $sum = $_POST['sum_calc'];
+  $address = $_POST['address_calc'];
+  $purpose = $_POST['purpose_calc'];
   $income = $_POST['income_calc'];
+  $percent = $_POST['percent_calc'];
 
   $pdo = new PDO($dsn, $user, $pass, $opt);
 
-  $sql = "INSERT INTO `users` (`name`, `income`) VALUES ('$name', '$income')";
+  $sql = "INSERT INTO `users` (`name`,`tel`,`passport`,`term`,`sum`,`address`,`purpose`,`income`, `percent`) VALUES ('$name', '$tel', '$passport', '$term', '$sum', '$address', '$purpose', '$income', '$percent')";
   $pdo->exec($sql);
 }
 
