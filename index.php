@@ -13,6 +13,11 @@
 <?php include 'src/php/base_pdo.php'; ?>
 
 <body>
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 	<header id="header" class="header">
 		<div class="header-container">
 			<a href="#">
