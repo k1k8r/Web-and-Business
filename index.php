@@ -12,6 +12,7 @@
 </head>
 
 <body>
+	<?php include 'src/php/base.php'; ?>
 
 	<header class="header">
 		<div class="header-container">
@@ -52,10 +53,10 @@
 					<div class="purpose-wrapper">
 						<div class="purpose-block">
 							<input class="purpose__input" type="text" placeholder="ФИО">
-							<input class="purpose__input" type="text" placeholder="Сумма кредита">
+							<input class="purpose__input" type="number" placeholder="Сумма кредита">
 						</div>
 						<div class="purpose-block">
-							<input class="purpose__input" type="text" placeholder="Доход">
+							<input class="purpose__input" type="number" placeholder="Доход">
 							<input class="purpose__input" type="text" placeholder="Цель кредита">
 						</div>
 					</div>
@@ -73,15 +74,15 @@
 				<div class="calc-wrapper">
 					<div class="calc-block-2">
 						<input id="userName" type="text" class="calc__input" placeholder="ФИО">
-						<input id="userWage" type="text" class="calc__input" placeholder="Доход">
-						<input id="kreditValue" type="text" class="calc__input" placeholder="Сумма кредита">
-						<input id="mounthCount" type="text" class="calc__input" placeholder="Кол-во месяцев">
+						<input id="userWage" type="number" class="calc__input" placeholder="Доход">
+						<input id="kreditValue" type="number" class="calc__input" placeholder="Сумма кредита">
+						<input id="mounthCount" type="number" class="calc__input" placeholder="Кол-во месяцев">
 					</div>
 					<div class="calc-block-2">
 						<input id="userRegion" type="text" class="calc__input" placeholder="Регион">
 						<input id="kreditGoal" type="text" class="calc__input" placeholder="Цель кредита">
-						<input id="kreditRate" type="text" class="calc__input" placeholder="Ставка">
-						<input id="isKreditAgree" type="text" class="calc__input" placeholder="Ваш кредит: ">
+						<input id="kreditRate" type="number" class="calc__input" placeholder="Ставка">
+						<input id="isKreditAgree" type="number" class="calc__input" placeholder="Ваш кредит: ">
 					</div>
 				</div>
 				<div class="calc-wrapper">
@@ -89,6 +90,7 @@
 					<div class="calc-send"><button id="clear" class="calc__button">Обнулить вашу кабалу</button></div>
 				</div>
 			</div>
+			<!-- //! Одобрено / Не одобрено -->
 			<div class="calc-block__result">
 
 			</div>
@@ -106,11 +108,11 @@
 				<div class="stock-wrapper">
 					<div class="stock-block">
 						<input type="text" class="stock__input" placeholder="ФИО">
-						<input type="text" class="stock__input" placeholder="Действительна до">
+						<input type="number" class="stock__input" placeholder="Действительна до">
 					</div>
 					<div class="stock-block">
-						<input type="text" class="stock__input" placeholder="Номер карты">
-						<input type="text" class="stock__input" placeholder="Код CVV">
+						<input type="number" class="stock__input" placeholder="Номер карты">
+						<input type="number" class="stock__input" placeholder="Код CVV">
 					</div>
 				</div>
 				<div class="stock-send"><button class="stock__button">Отдать евреям</button></div>
@@ -129,6 +131,7 @@
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="build/js/script.js"></script>
+
 </body>
 
 </html>

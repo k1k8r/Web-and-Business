@@ -89,9 +89,10 @@ gulp.task('img-compress', () => {
 // Отслеживать файлы
 gulp.task('watch', () => {
 	browserSinc.init({
-		server: {
-			baseDir: "./"
-		}
+		proxy: 'http://localhost/Web-and-Business-master/'
+		// server: {
+		// 	baseDir: "./"
+		// }
 	})
 	gulp.watch('./src/img/**', gulp.series('img-compress'))
 	//Следить за SCSS файлами
@@ -99,7 +100,7 @@ gulp.task('watch', () => {
 	//Следить за JS файлами
 	gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
 	//При изменении HTML запустить синхронизацию
-	gulp.watch('./*.html').on('change', browserSinc.reload);
+	gulp.watch('./*.php').on('change', browserSinc.reload);
 });
 
 
