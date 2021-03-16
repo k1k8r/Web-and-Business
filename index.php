@@ -74,15 +74,15 @@
 				<div class="calc-wrapper">
 					<div class="calc-block-2">
 						<input id="userName" type="text" class="calc__input" placeholder="ФИО">
-						<input id="userWage" type="number" class="calc__input" placeholder="Доход">
-						<input id="kreditValue" type="number" class="calc__input" placeholder="Сумма кредита">
-						<input id="mounthCount" type="number" class="calc__input" placeholder="Кол-во месяцев">
+						<input id="userPhone" type="phone" class="calc__input" placeholder="Телефон">
+						<input id="docNum" type="text" class="calc__input" placeholder="Номер документа">
+						<input id="mounthCount" type="text" class="calc__input" placeholder="Срок кредита">
 					</div>
 					<div class="calc-block-2">
-						<input id="userRegion" type="text" class="calc__input" placeholder="Регион">
+						<input id="userAddres" type="text" class="calc__input" placeholder="Адрес">
+						<input id="userDoc" type="text" class="calc__input" placeholder="Документ">
 						<input id="kreditGoal" type="text" class="calc__input" placeholder="Цель кредита">
-						<input id="kreditRate" type="number" class="calc__input" placeholder="Ставка">
-						<input id="isKreditAgree" type="number" class="calc__input" placeholder="Ваш кредит: ">
+						<input id="userWage" type="text" class="calc__input" placeholder="Ежемесячный доход">
 					</div>
 				</div>
 				<div class="calc-wrapper">
@@ -107,12 +107,12 @@
 			<form class="stock__form" action="#">
 				<div class="stock-wrapper">
 					<div class="stock-block">
-						<input type="text" class="stock__input" placeholder="ФИО">
-						<input type="number" class="stock__input" placeholder="Действительна до">
+						<input id="user" type="text" class="stock__input" placeholder="ФИО">
+						<input id="userCardDate" type="text" class="stock__input" placeholder="Действительна до">
 					</div>
 					<div class="stock-block">
-						<input type="number" class="stock__input" placeholder="Номер карты">
-						<input type="number" class="stock__input" placeholder="Код CVV">
+						<input id="userCardNum" type="text" class="stock__input" placeholder="Номер карты">
+						<input id="userCardCVV" type="text" class="stock__input" placeholder="Код CVV2/CVC2">
 					</div>
 				</div>
 				<div class="stock-send"><button class="stock__button">Отдать евреям</button></div>

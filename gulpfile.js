@@ -23,6 +23,8 @@ const scssFiles = [
 
 // Порядок подключения JS файлов
 const jsFiles = [
+	'./src/js/jquery.maskedinput.min.js',
+	'./src/js/mask.js',
 	'./src/js/calc.js',
 ]
 
@@ -89,7 +91,7 @@ gulp.task('img-compress', () => {
 // Отслеживать файлы
 gulp.task('watch', () => {
 	browserSinc.init({
-		proxy: 'http://localhost/Web-and-Business-master/'
+		proxy: 'http://localhost/Web-and-Business/'
 		// server: {
 		// 	baseDir: "./"
 		// }
