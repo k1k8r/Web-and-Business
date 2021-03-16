@@ -22,7 +22,7 @@
 
 	&-container {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		max-width: 1152px;
 		margin: 0 auto;
@@ -37,15 +37,15 @@
 	&__title {
 		text-align: center;
 		text-decoration: underline;
-		font-size: 15;
+		font-size: 20px;
 		font-weight: 700;
 		color: $main-text-color;
-		margin: 15px 0 5px 0;
+		margin: 20px 0 10px 0;
 	}
 
 	&__description {
 		text-align: center;
-		font-size: 15px;
+		font-size: 20px;
 		font-weight: 600;
 		line-height: 20px;
 		color: $main-text-color;

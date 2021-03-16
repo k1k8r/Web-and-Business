@@ -14,7 +14,7 @@
 <body>
 	<?php include 'src/php/base.php'; ?>
 
-	<header class="header">
+	<header id="header" class="header">
 		<div class="header-container">
 			<a href="#">
 				<div class="header__logo">
@@ -31,7 +31,7 @@
 					<li><a href="#" class="header__link">Контракт</a></li>
 					<li><a href="#" class="header__link">Культисты</a></li>
 				</ul>
-				<button class="header__button">Войти</button>
+				<a href="#popup"><button class="header__button">Войти</button></a>
 			</nav>
 		</div>
 	</header>
@@ -48,22 +48,6 @@
 					догадаетесь, как <br>попали в долговую Кабалу!
 				</p>
 			</div>
-			<div class="purpose-template-2">
-				<form class="purpose__form" action="#">
-					<div class="purpose-wrapper">
-						<div class="purpose-block">
-							<input class="purpose__input" type="text" placeholder="ФИО">
-							<input class="purpose__input" type="number" placeholder="Сумма кредита">
-						</div>
-						<div class="purpose-block">
-							<input class="purpose__input" type="number" placeholder="Доход">
-							<input class="purpose__input" type="text" placeholder="Цель кредита">
-						</div>
-					</div>
-					<div class="purpose__send"><button class="purpose__button">Рассчитать кабалу</button></div>
-				</form>
-
-			</div>
 		</div>
 	</main>
 
@@ -77,12 +61,14 @@
 						<input id="userPhone" type="phone" class="calc__input" placeholder="Телефон">
 						<input id="docNum" type="text" class="calc__input" placeholder="Номер документа">
 						<input id="mounthCount" type="text" class="calc__input" placeholder="Срок кредита">
+						<input id="kreditAmount" type="text" class="calc__input" placeholder="Запрашиваемая сумма">
 					</div>
 					<div class="calc-block-2">
 						<input id="userAddres" type="text" class="calc__input" placeholder="Адрес">
 						<input id="userDoc" type="text" class="calc__input" placeholder="Документ">
 						<input id="kreditGoal" type="text" class="calc__input" placeholder="Цель кредита">
 						<input id="userWage" type="text" class="calc__input" placeholder="Ежемесячный доход">
+						<input id="kreditPercent" type="text" class="calc__input" placeholder="Процент">
 					</div>
 				</div>
 				<div class="calc-wrapper">
@@ -92,7 +78,6 @@
 			</div>
 			<!-- //! Одобрено / Не одобрено -->
 			<div class="calc-block__result">
-
 			</div>
 		</div>
 	</section>
@@ -129,9 +114,27 @@
 			<h2 class="footer__workers">Аналитика:<br>Попов Павел<br> Группа ИБТ-31</h2>
 		</div>
 	</footer>
+
+	<div id="popup" class="popup">
+		<a href="#header" class="popup__area"></a>
+		<div class="popup-body">
+			<div class="popup-content">
+				<a href="#header" class="popup__close">X</a>
+				<div class="popup__title">Авторизация</div>
+				<form class="popup-form" onsubmit="return validate()" action="index.html">
+					<input id="username" required type="text" placeholder="Логин">
+					<input id="userpass" required type="password" placeholder="Пароль">
+					<input id="usermail" required type="email" placeholder="Email">
+					<input id="userphone" required type="tel" placeholder="Введите телефон">
+					<button type="submit" class="popup-form__send">Войти</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="build/js/script.js"></script>
-
 </body>
 
 </html>
